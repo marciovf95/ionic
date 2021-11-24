@@ -24,10 +24,34 @@
         </ion-chip>
       </ion-item>
       <ion-item-options side="end">
-        <ion-item-option>
+        <ion-item-option (click)="exibirAlertaFavorito()">
           <ion-icon slot="icon-only" name="star"></ion-icon>
         </ion-item-option>
       </ion-item-options>
     </ion-item-sliding>
+
+    <ion-item-sliding>
+      <ion-item lines="full">
+        <ion-thumbnail slot="start">
+          <img src="https://avatars.githubusercontent.com/u/18701313?v=4" />
+        </ion-thumbnail>
+        <ion-label class="ion-text-wrap">
+          <div>
+            <h1>Marcio Vieira Ferreira</h1>
+            <p>Dev Full Stack</p>
+          </div>
+        </ion-label>
+        <ion-chip color="success" outline>
+          <ion-label>A++</ion-label>
+        </ion-chip>
+      </ion-item>
+      <ion-item-options side="end">
+        <ion-item-option (click)="exibirAlertaFavorito()">
+          <ion-icon slot="icon-only" name="star"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+
+
   </ion-list>
 </ion-content>
