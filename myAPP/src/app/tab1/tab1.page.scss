@@ -1,0 +1,17 @@
+ion-item {
+  --padding-start: 10px;
+  --inner-padding-end: 10px;
+  h1 {
+    font-weight: bold;
+    margin-inline-end: 10px;
+  }
+  p {
+    font-size: 0.6rem;
+  }
+  img {
+    border-radius: 50%;
+  }
+  ion-chip {
+    padding-inline: 3px;
+  }
+}
