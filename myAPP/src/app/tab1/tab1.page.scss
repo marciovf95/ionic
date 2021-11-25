@@ -6,6 +6,9 @@ ion-item {
     margin-inline-end: 10px;
   }
   p {
+    font-size: 1.0rem;
+  }
+  p p{
     font-size: 0.6rem;
   }
   img {
@@ -13,5 +16,10 @@ ion-item {
   }
   ion-chip {
     padding-inline: 3px;
+  }
+  ion-badge{
+    font-weight: 300;
+    font-size: 0.7rem;
+    margin-right: 2px;
   }
 }

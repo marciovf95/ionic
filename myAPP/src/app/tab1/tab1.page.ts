@@ -1,3 +1,4 @@
+import { IGit } from './../models/IGit.model';
 import { Component } from '@angular/core';
 import { AlertController } from '@ionic/angular';
 import { ToastController } from '@ionic/angular';
@@ -8,6 +9,26 @@ import { ToastController } from '@ionic/angular';
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page {
+  titulo = 'Git Hub';
+
+  listaPessoas:IGit[] = [
+    {
+      nome:"Marcio Vieira Ferreira",
+      descricao:"Dev",
+      classificacao:"A+",
+      idade:26,
+      repos:["ionic","spa"],
+      imagem:"https://avatars.githubusercontent.com/u/18701313?v=4"
+    },
+    {
+      nome:"Marcio VF",
+      descricao:"Dev Full Stack",
+      classificacao:"A++",
+      idade:26,
+      repos:["ionic","spa"],
+      imagem:"https://avatars.githubusercontent.com/u/3171503?s=200&v=4"
+    }
+  ];
 
   constructor(public alertController: AlertController,public toastController: ToastController) {}
 
