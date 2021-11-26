@@ -6,4 +6,5 @@ export interface IGit
   idade:number;
   imagem:string;
   classificacao:string;
+  pagina?:string;
 }

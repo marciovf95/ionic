@@ -9,7 +9,7 @@
 
   <ion-list>
     <ion-item-sliding *ngFor="let pessoa of listaPessoas">
-      <ion-item lines="full">
+      <ion-item lines="full" (click)="exibirPessoa(pessoa)" >
         <ion-thumbnail slot="start">
           <img [src]="pessoa.imagem" />
         </ion-thumbnail>
