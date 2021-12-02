@@ -42,7 +42,7 @@ export class Tab1Page {
   ) {}
 
   exibirPessoa(pessoa:IGit){
-    this.dadosService.guardarDados('Pessoa',pessoa);
+    this.dadosService.guardarDados('pessoa',pessoa);
     this.route.navigateByUrl('/dados-pessoa');
   }
 
