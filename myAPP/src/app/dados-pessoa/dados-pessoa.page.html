@@ -1,10 +1,13 @@
 <ion-header>
-  <ion-toolbar color="dark">
+  <ion-toolbar >
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
     <ion-title>Dados da Pessoa</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content color="light">
+<ion-content >
   <ion-card *ngIf="pessoa">
     <ion-card-header>
       <img [src]="pessoa.imagem" >
@@ -15,7 +18,7 @@
       <p>{{pessoa.descricao}} - {{pessoa.nome}}</p>
     </ion-card-content>
     <ion-item>
-      <ion-badge color="light" *ngFor="let repo of pessoa.repos">
+      <ion-badge  *ngFor="let repo of pessoa.repos">
         {{repo}}
       </ion-badge>
     </ion-item>
