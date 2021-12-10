@@ -7,24 +7,24 @@
 <ion-content [fullscreen]="true">
   <ion-searchbar (ionChange)="buscarPerfilGit($event)" ></ion-searchbar>
 
-  <ion-list>
-    <ion-item-sliding *ngFor="let pessoa of listaPessoas">
+  <ion-list *ngIf="listaPessoasGit">
+    <ion-item-sliding *ngFor="let pessoa of listaPessoasGit">
       <ion-item lines="full" (click)="exibirPessoa(pessoa)" >
         <ion-thumbnail slot="start">
-          <img [src]="pessoa.imagem" />
+          <img [src]="pessoa.avatar_url" />
         </ion-thumbnail>
         <ion-label class="ion-text-wrap">
           <div>
-            <h1>{{pessoa.nome}}</h1>
-            <p>{{pessoa.descricao}}</p>
-            <p>idade: {{pessoa.idade}}</p>
-            <ion-badge color="light" *ngFor="let item of pessoa.repos"
+            <h1>{{pessoa.name}}</h1>
+            <p>{{pessoa.bio}}</p>
+            <p>Comprany: {{pessoa.company}}</p>
+            <!-- <ion-badge color="light" *ngFor="let item of pessoa.repos"
               >{{item}}</ion-badge
-            >
+            > -->
           </div>
         </ion-label>
         <ion-chip color="success" outline>
-          <ion-label>{{pessoa.classificacao}}</ion-label>
+          <ion-label>{{pessoa.public_repos}}</ion-label>
         </ion-chip>
       </ion-item>
       <ion-item-options side="end">

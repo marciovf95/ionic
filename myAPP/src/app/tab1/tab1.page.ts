@@ -37,6 +37,7 @@ export class Tab1Page {
   ];
 
   listaPessoasGit:IGitAPI
+
   constructor(
     public alertController: AlertController,
     public toastController: ToastController,
@@ -46,18 +47,20 @@ export class Tab1Page {
   ) {}
 
   buscarPerfilGit(evento:any){
-    console.log(evento.target.value);
+    // console.log(evento.target.value);
     const busca = evento.target.value
     if(busca && busca.trim() !== '')
     {
-      this.githubService.buscarNaAPIGit(busca).subscribe(dados=>{
+      this.githubService.buscarNaAPIGit(busca).subscribe(        
+        dados=>{
         console.log(dados);
         this.listaPessoasGit=dados;
-      })
+        }
+        )
     }
   }
 
-  exibirPessoa(pessoa:IGit){
+  exibirPessoa(pessoa:IGitAPI){
     this.dadosService.guardarDados('pessoa',pessoa);
     this.route.navigateByUrl('/dados-pessoa');
   }

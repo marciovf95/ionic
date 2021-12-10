@@ -10,17 +10,18 @@ import { map, catchError } from 'rxjs/operators';
 })
 export class GithubService {
 
-  private apiURL = 'https://api.github.com/users/';
+  private apiURL = 'https://api.github.com/users';
   private key = '';
 
   constructor(private http:HttpClient,public ToastController: ToastController) { }
 
   buscarNaAPIGit(busca : string):Observable<IGitAPI>{
 
-    const url =`${this.apiURL}${busca}`;
+    const url =`${this.apiURL}/${busca}`;
 
     return this.http.get<IGitAPI>(url).pipe(
-      map(retorno=>retorno),
+      // map(retorno=>retorno),
+      map(retorno=>Array.of(retorno)),
       catchError(erro =>this.showError(erro))
     )
   }
