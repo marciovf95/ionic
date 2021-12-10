@@ -5,7 +5,7 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-searchbar></ion-searchbar>
+  <ion-searchbar (ionChange)="buscarPerfilGit($event)" ></ion-searchbar>
 
   <ion-list>
     <ion-item-sliding *ngFor="let pessoa of listaPessoas">

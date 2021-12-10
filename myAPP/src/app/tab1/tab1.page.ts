@@ -1,3 +1,5 @@
+import { IGitAPI } from './../models/IGitAPI.model';
+import { GithubService } from './../services/github.service';
 import { DadosService } from './../services/dados.service';
 import { IGit } from './../models/IGit.model';
 import { Component } from '@angular/core';
@@ -34,12 +36,26 @@ export class Tab1Page {
     },
   ];
 
+  listaPessoasGit:IGitAPI
   constructor(
     public alertController: AlertController,
     public toastController: ToastController,
     public dadosService: DadosService,
+    public githubService:GithubService,
     public route: Router
   ) {}
+
+  buscarPerfilGit(evento:any){
+    console.log(evento.target.value);
+    const busca = evento.target.value
+    if(busca && busca.trim() !== '')
+    {
+      this.githubService.buscarNaAPIGit(busca).subscribe(dados=>{
+        console.log(dados);
+        this.listaPessoasGit=dados;
+      })
+    }
+  }
 
   exibirPessoa(pessoa:IGit){
     this.dadosService.guardarDados('pessoa',pessoa);
