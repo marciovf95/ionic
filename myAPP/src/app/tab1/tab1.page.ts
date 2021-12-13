@@ -51,7 +51,7 @@ export class Tab1Page {
     const busca = evento.target.value
     if(busca && busca.trim() !== '')
     {
-      this.githubService.buscarNaAPIGit(busca).subscribe(        
+      this.githubService.buscarNaAPIGit(busca).subscribe(
         dados=>{
         console.log(dados);
         this.listaPessoasGit=dados;
