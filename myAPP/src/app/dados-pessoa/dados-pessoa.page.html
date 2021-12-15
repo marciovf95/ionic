@@ -10,17 +10,18 @@
 <ion-content >
   <ion-card *ngIf="pessoa">
     <ion-card-header>
-      <img [src]="pessoa.imagem" >
+      <img [src]="pessoa.avatar_url" />
     </ion-card-header>
 
     <ion-card-content>
-      <h1>{{pessoa.nome}}</h1>
-      <p>{{pessoa.descricao}} - {{pessoa.nome}}</p>
+      <h1>{{pessoa.name}}</h1>
+      <!-- <p>{{pessoa.company}} - {{pessoa.bio}}</p> -->
+       <p>{{pessoa.bio}}</p> 
     </ion-card-content>
-    <ion-item>
+    <!-- <ion-item>
       <ion-badge  *ngFor="let repo of pessoa.repos">
         {{repo}}
       </ion-badge>
-    </ion-item>
+    </ion-item> -->
   </ion-card>
 </ion-content>

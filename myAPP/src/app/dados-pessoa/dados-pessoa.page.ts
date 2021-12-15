@@ -1,6 +1,6 @@
-import { IGit } from './../models/IGit.model';
 import { DadosService } from './../services/dados.service';
 import { Component, OnInit } from '@angular/core';
+import { IGitAPI } from '../models/IGitAPI.model';
 
 @Component({
   selector: 'app-dados-pessoa',
@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DadosPessoaPage implements OnInit {
 
-  pessoa:IGit;
+  pessoa:IGitAPI;
   constructor(public dadosService:DadosService) {   }
 
   ngOnInit() {
