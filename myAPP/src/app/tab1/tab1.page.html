@@ -8,6 +8,15 @@
   <ion-searchbar (ionChange)="buscarPerfilGit($event)" ></ion-searchbar>
 
   <ion-list *ngIf="listaPessoasGit">
+    <ion-item lines="none" *ngIf="listaPessoasGit.login">
+      <ion-label class="ion-text-center">
+      </ion-label>
+      <ion-label class="ion-text-center">
+        Não Encontrado
+      </ion-label>
+    </ion-item>
+
+
     <ion-item-sliding *ngFor="let pessoa of listaPessoasGit">
       <ion-item lines="full" (click)="exibirPessoa(pessoa)" >
         <ion-thumbnail slot="start">

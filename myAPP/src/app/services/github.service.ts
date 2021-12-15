@@ -20,6 +20,7 @@ export class GithubService {
     const url =`${this.apiURL}/${busca}`;
 
     return this.http.get<IGitAPI>(url).pipe(
+      //TODO Tratamento erro
       // map(retorno=>retorno),
       map(retorno=>Array.of(retorno)),
       catchError(erro =>this.showError(erro))
